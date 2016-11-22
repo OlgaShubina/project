@@ -1,0 +1,23 @@
+damain:
+  archive_module: pg_archive
+  chunk_storage: redis_storage
+  host: "127.0.0.1"
+  post: 5000
+  query:
+    size_stream: 8000
+    desity: 100
+pg_archive:
+  database:
+    user: "drupal"
+    password: "drupal"
+    host: "127.0.0.1"
+    dbname: "logger"
+  types:
+    table: "log_double"
+  text:
+    table: "log_text"
+redis_storage:
+  host:
+  port:
+    db:
+      ttl:
